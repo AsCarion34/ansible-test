@@ -1,0 +1,8 @@
+- name: Facts Test
+  hosts: all
+  gather_facts: yes # Facts 정의하지 않을 경우 기본적으로 사용가능 하다던데...
+  tasks:
+  - name: Facts
+    debug:
+      msg:
+        - "{{ ansible_facts }}"
